@@ -74,13 +74,13 @@ const app = {
     const elem = document.querySelector('.carousel-content');
     // eslint-disable-next-line no-undef
     new Flickity('.carousel-content', {
-      autoPlay: 3000
+      autoPlay: 3000,
     });
-    
+
     // eslint-disable-next-line no-undef
     new Flickity(elem, {
       cellAlign: 'left',
-      contain: true
+      contain: true,
     });
 
 
@@ -127,13 +127,13 @@ const app = {
         /* execute initMenu method */
         thisApp.initMenu();
       });
-      
+
     //console.log('thisApp.data', JSON.stringify(thisApp.data));
-      
+
   },
 
   initBooking: function(){
-    const thisApp = this;  
+    const thisApp = this;
 
     const bookingWidget = document.querySelector(select.containerOf.booking);
     thisApp.booking = new Booking(bookingWidget);
