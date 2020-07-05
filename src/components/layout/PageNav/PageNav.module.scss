@@ -1,10 +1,10 @@
 @import '../../../styles/settings.scss';
 
 .component {
-  padding: $base-size;
+  padding: $base-size 0;
+  margin-left: auto;
 }
 
-.nav  {
-  display: inline;
-  padding: 30px;
+.link {
+  color: inherit;
 }
