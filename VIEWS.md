@@ -33,7 +33,7 @@
 
 - `/waiter`
   - tabela
-    - w wiekszach sotliki
+    - w wierszach sotliki
     - w kolumnach różne rodzaje informacji (status, czas od ostatniej aktywności)
     - w ostatniej kolumnie dostępne akcje dla danego stolika
 - `/waiter/order/new`
