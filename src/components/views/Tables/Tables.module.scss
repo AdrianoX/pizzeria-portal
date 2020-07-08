@@ -1,5 +1,22 @@
 @import '../../../styles/settings.scss';
 
+.formSize {
+  width: 500px;
+}
+
+.tableSize{
+  width: 600px;
+}
+
+
 .component {
-  padding: $base-size;
+  margin: 40px auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 30px;
+  justify-content: center;
+}
+
+.textField {
+  width: 220px;
 }
