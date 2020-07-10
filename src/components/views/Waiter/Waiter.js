@@ -1,25 +1,3 @@
-// import React from 'react';
-// import styles from './Waiter.module.scss';
-// import { Link } from 'react-router-dom';
-
-
-// const Waiter = () => {
-//   return (
-//     <div className={styles.component}>
-//       <h2>Waiter view</h2>
-//       <li>
-//         <Link to={process.env.PUBLIC_URL + '/waiter/order/new'}>Check new order</Link>
-//       </li>
-//       <li>
-//         <Link to={process.env.PUBLIC_URL + '/waiter/order/:id'}>Check order id</Link>
-//       </li>
-//     </div>
-//   );
-// };
-
-// export default Waiter;
-
-
 import React from 'react';
 import styles from './Waiter.module.scss';
 import Table from '@material-ui/core/Table';
@@ -29,6 +7,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
+import { Link } from 'react-router-dom';
 
 const demoContent = [
   {id: '1', status: 'free', order: null},
@@ -39,18 +18,21 @@ const demoContent = [
   {id: '6', status: 'paid', order: 456},
 ];
 
-const renderActions = status => {
-  switch (status) {
+const renderActions = (column, id) => {
+  switch (column) {
     case 'free':
       return (
         <>
-          <Button>thinking</Button>
-          <Button>new order</Button>
+          {/* <Button onClick={() => this.fetchStatus(id, 'thinking')}>thinking</Button> */}
+          {/* <Route exact path={process.env.PUBLIC_URL + '/waiter/order/:id'} component={WaiterOrder} /> */}
+          <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/:id'`}>thinking</Button>
+          <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/new`}>new order</Button>
+
         </>
       );
     case 'thinking':
       return (
-        <Button>new order</Button>
+        <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/new`}>new order</Button>   // CL 22
       );
     case 'ordered':
       return (
