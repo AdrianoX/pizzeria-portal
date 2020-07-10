@@ -1,6 +1,6 @@
 
 import React from 'react';
-import styles from './TablesBooking.module.scss';
+import styles from './TablesBookingId.module.scss';
 import { useParams } from 'react-router-dom';
 
 import Paper from '@material-ui/core/Paper';
@@ -15,7 +15,7 @@ import Button from '@material-ui/core/Button';
 
 
 const dateInfoTest = {
-  tableID: '9',
+  tableID: '9a6',
   ppl: '5',
   date: '2020-05-17',
   time: '16:15',
@@ -24,7 +24,7 @@ const dateInfoTest = {
   smokingTable: 'Yes',
 };
 
-const TablesBooking = () => {
+const TablesBookingId = () => {
   const {id} = useParams();
   return (
     <Paper className={styles.component}>
@@ -86,12 +86,12 @@ const TablesBooking = () => {
           </TableRow>
         </TableBody>
       </Table>
-      <div className={styles.edit}>
-        <Button>Edit</Button>
+      <div className={styles.add}>
+        <Button>Add</Button>
       </div>
     </Paper>
 
   );
 };
 
-export default TablesBooking;
+export default TablesBookingId;

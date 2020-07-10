@@ -25,14 +25,20 @@ const renderActions = (column, id) => {
         <>
           {/* <Button onClick={() => this.fetchStatus(id, 'thinking')}>thinking</Button>*/}
           {/* <Route exact path={process.env.PUBLIC_URL + '/waiter/order/:id'} component={WaiterOrder} /> */}
-          <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/:id'`}>thinking</Button>
+
           <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/new`}>new order</Button>
+          <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/:id'`}>show order</Button>
 
         </>
       );
     case 'thinking':
       return (
-        <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/new`}>new order</Button>   // CL 22
+        <>
+          {/* <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/new`}>new order</Button>
+          <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/:id'`}>thinking</Button> */}
+          <Button>new order</Button>
+          <Button>thinking</Button>
+        </>
       );
     case 'ordered':
       return (

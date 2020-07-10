@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from './components/views/Login/Login';
 import Homepage from './components/views/HomePage/HomePage';
 import Tables from './components/views/Tables/Tables';
-import TablesBooking from './components/views/TablesBooking/TablesBooking';
+// import TablesBookingId from './components/views/TablesBookingId/TablesBookingId';
 import TablesBookingNew from './components/views/TablesBookingNew/TablesBookingNew';
 import TableEvents from './components/views/TableEvents/TableEvents';
 import TableEventsNew from './components/views/TableEventsNew/TableEventsNew';
@@ -29,7 +29,7 @@ const theme = createMuiTheme({
 function App() {
   return (
 
-    <BrowserRouter basename={'/panel'}>
+    <BrowserRouter>
       <StylesProvider injectFirst>
         <ThemeProvider theme={theme}>
           <MainLayout>
@@ -37,7 +37,7 @@ function App() {
               <Route exact path={process.env.PUBLIC_URL + '/'} component={Homepage} />
               <Route exact path={process.env.PUBLIC_URL + '/login'} component={Login} />
               <Route exact path={process.env.PUBLIC_URL + '/tables'} component={Tables} />
-              <Route exact path={process.env.PUBLIC_URL + '/tables/booking/:id'} component={TablesBooking} />
+              {/* <Route exact path={process.env.PUBLIC_URL + '/tables/booking/:id'} component={TablesBookingId} /> */}
               <Route exact path={process.env.PUBLIC_URL + '/tables/booking/new'} component={TablesBookingNew} />
               <Route exact path={process.env.PUBLIC_URL + '/tables/events/:id'} component={TableEvents} />
               <Route exact path={process.env.PUBLIC_URL + '/tables/events/new'} component={TableEventsNew} />

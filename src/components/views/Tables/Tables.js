@@ -24,11 +24,11 @@ const renderActions = (column, id) => {
   switch (column) {
     case 'NewBooking':
       return (
-        <Button component ={Link} to={process.env.PUBLIC_URL +'/tables/booking/'+ id}>NewBooking</Button>
+        <Button component ={Link} to={process.env.PUBLIC_URL +'/tables/booking/:id'+ id}>NewBooking</Button>
       );
     case 'NewEvent':
       return (
-        <Button component ={Link} to={process.env.PUBLIC_URL +'/tables/events/'+ id}>NewEvent</Button>
+        <Button component ={Link} to={process.env.PUBLIC_URL +'/tables/events/:id'+ id}>NewEvent</Button>
       );
     default:
       return null;
@@ -55,7 +55,8 @@ const Tables = () => {
             shrink: true,
           }}
         />
-        <Button className={styles.button} component ={Link} to={process.env.PUBLIC_URL +'/tables/booking/new'}>New Table</Button>
+        {/* <Button className={styles.button} component ={Link} to={process.env.PUBLIC_URL +'/tables/booking/new'}>New Booking</Button> */}
+        <Button className={styles.button} component ={Link} to={process.env.PUBLIC_URL +'/tables/booking/new'}>New Booking</Button>
         <Button className={styles.button} component ={Link} to={process.env.PUBLIC_URL +'/tables/events/new'}>New Event</Button>
       </form>
 
