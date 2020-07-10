@@ -23,7 +23,7 @@ const renderActions = (column, id) => {
     case 'free':
       return (
         <>
-          {/* <Button onClick={() => this.fetchStatus(id, 'thinking')}>thinking</Button> */}
+          {/* <Button onClick={() => this.fetchStatus(id, 'thinking')}>thinking</Button>*/}
           {/* <Route exact path={process.env.PUBLIC_URL + '/waiter/order/:id'} component={WaiterOrder} /> */}
           <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/:id'`}>thinking</Button>
           <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/new`}>new order</Button>
