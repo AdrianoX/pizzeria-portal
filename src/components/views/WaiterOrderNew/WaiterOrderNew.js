@@ -37,7 +37,6 @@ const WaiterOrderNew = () => {
             <Button className={styles.addInMenu}>+add new menu product list</Button>
           </div>
         </div>
-        {/* <h2> ````````````````````````````````</h2> */}
         <div className={styles.options}>
           <div className={styles.tableOption}>
             <p>Table Number</p>

@@ -31,7 +31,6 @@ const TableEventsNew = () => {
             <TextField
               id="standard-textarea"
               label="Table number"
-              // placeholder="Placeholder"
               multiline
             />
           </ListItemText>
@@ -41,7 +40,6 @@ const TableEventsNew = () => {
             <TextField
               id="standard-textarea"
               label="Guests"
-              // placeholder="Placeholder"
               multiline
             />
           </ListItemText>
@@ -51,7 +49,6 @@ const TableEventsNew = () => {
             <TextField
               id="standard-textarea"
               label="Client name"
-              // placeholder="Placeholder"
               multiline
             />
           </ListItemText>
@@ -61,7 +58,6 @@ const TableEventsNew = () => {
             <TextField
               id="standard-textarea"
               label="Phone"
-              // placeholder="Placeholder"
               multiline
             />
           </ListItemText>
@@ -71,7 +67,6 @@ const TableEventsNew = () => {
             <TextField
               id="standard-textarea"
               label="E-mail"
-              // placeholder="Placeholder"
               multiline
             />
           </ListItemText>
@@ -81,7 +76,6 @@ const TableEventsNew = () => {
             <TextField
               id="standard-textarea"
               label="Status"
-              // placeholder="Placeholder"
               multiline
             />
           </ListItemText>
@@ -91,7 +85,6 @@ const TableEventsNew = () => {
             <TextField
               id="standard-textarea"
               label="Comments"
-              // placeholder="Placeholder"
               multiline
             />
           </ListItemText>

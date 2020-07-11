@@ -34,7 +34,6 @@ const TableEventsNew = () => {
             <TextField
               id="standard-textarea"
               label="Guests"
-              // placeholder="Placeholder"
               multiline
             />
           </ListItemText>
@@ -44,7 +43,6 @@ const TableEventsNew = () => {
             <TextField
               id="standard-textarea"
               label="Table number"
-              // placeholder="Placeholder"
               multiline
             />
           </ListItemText>
@@ -54,7 +52,6 @@ const TableEventsNew = () => {
             <TextField
               id="standard-textarea"
               label="Phone"
-              // placeholder="Placeholder"
               multiline
             />
           </ListItemText>
@@ -64,7 +61,6 @@ const TableEventsNew = () => {
             <TextField
               id="standard-textarea"
               label="Client name"
-              // placeholder="Placeholder"
               multiline
             />
           </ListItemText>
@@ -93,10 +89,6 @@ const TableEventsNew = () => {
               <MenuItem value={1}>Yes</MenuItem>
               <MenuItem value={2}>No</MenuItem>
             </Select>
-            {/* <div className={styles.tableOption}>
-                <p>How many ? </p>
-                <TextField className={styles.item} id="standard-basic" label='Animal' variant="filled" />
-              </div> */}
           </div>
         </ListItem>
         <ListItem>
@@ -112,25 +104,6 @@ const TableEventsNew = () => {
             </Select>
           </div>
         </ListItem>
-        {/* <ListItem>
-          <div className={styles.tableOption}>
-            <p>Animals ? </p>
-            <Select
-              id="select-table"
-              displayEmpty
-              value={1}
-            >
-              <MenuItem value={1}>Yes</MenuItem>
-              <MenuItem value={2}>No</MenuItem>
-            </Select>
-          </div>
-        </ListItem> */}
-        {/* <ListItem>
-          <div className={styles.tableOption}>
-            <p>How many ? </p>
-            <TextField className={styles.item} id="standard-basic" label='Animal' variant="filled" />
-          </div>
-        </ListItem> */}
       </List>
       <div className={styles.add}>
         <Button variant="outlined">Add New Booking : )</Button>
