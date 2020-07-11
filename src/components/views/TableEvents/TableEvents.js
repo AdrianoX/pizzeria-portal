@@ -10,18 +10,21 @@ import TableRow from '@material-ui/core/TableRow';
 import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
 
-import TextField from '@material-ui/core/TextField';
+// import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 
 const dateInfoTest = {
-  tableID: '9',
-  ppl: '5',
-  date: '2020-05-17',
-  time: '16:15',
+  tableID: '5',
+  ppl: '4',
+  date: '2020-07-12',
+  time: '17:15',
   name: 'Adrian AdrianoX',
   phone: '666-666-666',
-  smokingTable: 'Yes',
+  // smokingTable: 'Yes',
+  email: 'adrianox@gmail.com',
+  status: 'Confirmed',
+  comments: 'Extra chair',
 };
 
 const TableEvents = () => {
@@ -29,19 +32,21 @@ const TableEvents = () => {
   return (
     <Paper className={styles.component}>
       <div className={styles.header}>
-        <h2>Events reservation</h2>
+        <h2>New Event Confirmation</h2>
         <h3>Nr: {id}</h3>
       </div>
       <Table className={styles.tableID}>
         <TableHead>
           <TableRow>
-            <TableCell>Table</TableCell>
-            <TableCell>Amount of ppl</TableCell>
+            <TableCell>Table number</TableCell>
+            <TableCell>Guests</TableCell>
             <TableCell>Date</TableCell>
             <TableCell>Hour</TableCell>
             <TableCell>Phone</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Smoking Table</TableCell>
+            <TableCell>Client name</TableCell>
+            <TableCell>E-mail</TableCell>
+            <TableCell>Status</TableCell>
+            <TableCell>Comments</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -53,26 +58,10 @@ const TableEvents = () => {
               {dateInfoTest.ppl}
             </TableCell>
             <TableCell>
-              <TextField
-                id="date"
-                type="date"
-                value={dateInfoTest.date}
-                className={styles.textField}
-                InputLabelProps={{
-                  shrink: true,
-                }}
-              />
+              {dateInfoTest.date}
             </TableCell>
             <TableCell>
-              <TextField
-                id="time"
-                type="time"
-                value={dateInfoTest.time}
-                className={styles.textField}
-                InputLabelProps={{
-                  shrink: true,
-                }}
-              />
+              {dateInfoTest.time}
             </TableCell>
             <TableCell>
               {dateInfoTest.phone}
@@ -81,7 +70,13 @@ const TableEvents = () => {
               {dateInfoTest.name}
             </TableCell>
             <TableCell>
-              {dateInfoTest.smokingTable}
+              {dateInfoTest.email}
+            </TableCell>
+            <TableCell>
+              {dateInfoTest.status}
+            </TableCell>
+            <TableCell>
+              {dateInfoTest.comments}
             </TableCell>
           </TableRow>
         </TableBody>

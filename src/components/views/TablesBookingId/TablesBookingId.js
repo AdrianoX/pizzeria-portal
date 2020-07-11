@@ -10,38 +10,42 @@ import TableRow from '@material-ui/core/TableRow';
 import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
 
-import TextField from '@material-ui/core/TextField';
+// import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 
 
 const dateInfoTest = {
-  tableID: '9a6',
+  tableID: '9',
   ppl: '5',
-  date: '2020-05-17',
-  time: '16:15',
+  date: '2020-07-12',
+  time: '17:15',
   name: 'Adrian AdrianoX',
   phone: '666-666-666',
   smokingTable: 'Yes',
+  animals: 'No',
+  payment: 'Card',
 };
 
-const TablesBookingId = () => {
+const TablesBooking = () => {
   const {id} = useParams();
   return (
     <Paper className={styles.component}>
       <div className={styles.header}>
-        <h2>Tables reservation</h2>
+        <h2>New Booking Confirmation</h2>
         <h3>Nr: {id}</h3>
       </div>
       <Table className={styles.tableID}>
         <TableHead>
           <TableRow>
-            <TableCell>Table</TableCell>
-            <TableCell>Amount of ppl</TableCell>
+            <TableCell>Table number</TableCell>
+            <TableCell>Guests</TableCell>
             <TableCell>Date</TableCell>
             <TableCell>Hour</TableCell>
             <TableCell>Phone</TableCell>
-            <TableCell>Name</TableCell>
+            <TableCell>Client name</TableCell>
             <TableCell>Smoking Table</TableCell>
+            <TableCell>Animals</TableCell>
+            <TableCell>Payment</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -53,26 +57,10 @@ const TablesBookingId = () => {
               {dateInfoTest.ppl}
             </TableCell>
             <TableCell>
-              <TextField
-                id="date"
-                type="date"
-                value={dateInfoTest.date}
-                className={styles.textField}
-                InputLabelProps={{
-                  shrink: true,
-                }}
-              />
+              {dateInfoTest.date}
             </TableCell>
             <TableCell>
-              <TextField
-                id="time"
-                type="time"
-                value={dateInfoTest.time}
-                className={styles.textField}
-                InputLabelProps={{
-                  shrink: true,
-                }}
-              />
+              {dateInfoTest.time}
             </TableCell>
             <TableCell>
               {dateInfoTest.phone}
@@ -83,15 +71,21 @@ const TablesBookingId = () => {
             <TableCell>
               {dateInfoTest.smokingTable}
             </TableCell>
+            <TableCell>
+              {dateInfoTest.animals}
+            </TableCell>
+            <TableCell>
+              {dateInfoTest.payment}
+            </TableCell>
           </TableRow>
         </TableBody>
       </Table>
       <div className={styles.add}>
-        <Button>Add</Button>
+        <Button>Edit</Button>
       </div>
     </Paper>
 
   );
 };
 
-export default TablesBookingId;
+export default TablesBooking;

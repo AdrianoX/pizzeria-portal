@@ -10,11 +10,11 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 
 const demoContent = [
-  {id: '1', status: 'free', order: null},
+  {id: '1', status: 'free', order: 666},
   {id: '2', status: 'thinking', order: null},
   {id: '3', status: 'ordered', order: 123},
   {id: '4', status: 'prepared', order: 234},
-  {id: '5', status: 'delivered', order: 345},
+  {id: '5', status: 'delivered', order: null},
   {id: '6', status: 'paid', order: 456},
 ];
 
@@ -83,7 +83,7 @@ const Waiter = () => (
             </TableCell>
             <TableCell>
               {row.order && (
-                <Button to={`${process.env.PUBLIC_URL}/waiter/order/${row.order}`}>
+                <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/${row.order}`}>
                   {row.order}
                 </Button>
               )}

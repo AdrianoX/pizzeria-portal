@@ -6,21 +6,26 @@ import Button from '@material-ui/core/Button';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 
-const demoMenu = [
-  {name: 'pizza margheritta', price: '5$'},
-  {name: 'ravioli anatra', price: '7$'},
+const menuTest = [
+  {name: '(STARTERS) >>> Garlic bread', price: '2$'},
+  {name: '(MAIN DISH) >>> Chicken with black garlic', price: '25$'},
+  {name: '(FOOD ADDITIONS) >>> Mango salad with white pepper', price: '9$'},
+  {name: '(DRINKS) >>> Red whine', price: '15$'},
 ];
 
 const WaiterOrder = () => {
   const {id} = useParams();
   return (
     <Paper className={styles.component}>
-      <h2>Waiter Order view</h2>
+      <h1># WAITER PANEL #</h1>
+      <h3>_________________</h3>
+      <h2>Order Confirmation</h2>
+      <h3>_________________</h3>
       <h3>Nr: {id}</h3>
       <div className={styles.order}>
         <div className={styles.table}>
           <div className={styles.body}>
-            {demoMenu.map(row => (
+            {menuTest.map(row => (
               <div className={styles.menuRow} key={row.name}>
                 <div className={styles.position}>
                   {row.name}
@@ -31,7 +36,7 @@ const WaiterOrder = () => {
                 <Button className={styles.optionButtons}>delete</Button>
               </div>
             ))}
-            <Button className={styles.addInMenu}>+add</Button>
+            <Button className={styles.addInMenu}></Button>
           </div>
         </div>
         <div className={styles.options}>
@@ -40,7 +45,7 @@ const WaiterOrder = () => {
             <Select
               id="select-table"
               displayEmpty
-              value={1}
+              value={4}
             >
               <MenuItem value={1}>1</MenuItem>
               <MenuItem value={2}>2</MenuItem>
@@ -53,12 +58,12 @@ const WaiterOrder = () => {
           </div>
           <div className={styles.cost}>
             <p>Cost</p>
-            <p>65$</p>
+            <p>51 $</p>
           </div>
         </div>
       </div>
       <div className={styles.foot}>
-        <Button className={styles.addOrder}>Submit</Button>
+        <Button className={styles.addOrder} variant="outlined">EDIT ORDER</Button>
       </div>
     </Paper>
   );
