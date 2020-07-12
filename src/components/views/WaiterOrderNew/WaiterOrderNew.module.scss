@@ -2,6 +2,7 @@
 
 .component {
   padding: $base-size;
+  text-align: center;
 }
 
 
@@ -10,6 +11,29 @@
 }
 
 
-.tableOption p{
-  margin-top: 55px;
+.optionButtons{
+  left: 95px;
+}
+
+
+.tableOption {
+  max-width: 30%;
+  border: 1px solid #345678;
+  padding: 20px 42px;
+  border-radius: 5px;
+  margin-left: 425px;
+  text-align: left;
+}
+
+.tableOption p {
+  font-weight: bold;
+}
+
+.cost {
+  max-width: 30%;
+  border: 1px solid #345678;
+  padding: 20px 42px;
+  border-radius: 5px;
+  margin-left: 425px;
+  text-align: center;
 }

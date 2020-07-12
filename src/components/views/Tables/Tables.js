@@ -24,11 +24,11 @@ const renderActions = (column, id) => {
   switch (column) {
     case 'NewBooking':
       return (
-        <Button component ={Link} to={process.env.PUBLIC_URL +'/tables/booking/:id'+ id}>NewBooking</Button>
+        <Button component ={Link} to={process.env.PUBLIC_URL +'/tables/booking'+ id}>NewBooking</Button>
       );
     case 'NewEvent':
       return (
-        <Button component ={Link} to={process.env.PUBLIC_URL +'/tables/events/:id'+ id}>NewEvent</Button>
+        <Button component ={Link} to={process.env.PUBLIC_URL +'/tables/events'+ id}>NewEvent</Button>
       );
     default:
       return null;

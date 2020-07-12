@@ -24,7 +24,7 @@ const renderActions = (column, id) => {
       return (
         <>
           <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/new`}>new order</Button>
-          <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/:id'`}>show order</Button>
+          <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order`}>show order</Button>
 
         </>
       );

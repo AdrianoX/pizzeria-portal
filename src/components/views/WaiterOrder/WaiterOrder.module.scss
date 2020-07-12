@@ -2,4 +2,49 @@
 
 .component {
   padding: $base-size;
+  text-align: center;
 }
+
+
+.addInMenu, .foot{
+  margin-top: 35px;
+}
+
+
+.optionButtons{
+  left: 95px;
+  // padding-left: 75px;
+  // z-index: 3;
+  // width: 5%;
+  justify-content: center;
+}
+
+.test123{
+  text-align: center;
+  margin-top: -28px;
+}
+
+
+.tableOption {
+  max-width: 30%;
+  border: 1px solid #345678;
+  padding: 20px 42px;
+  border-radius: 5px;
+  margin-left: 425px;
+  text-align: left;
+}
+
+.tableOption p {
+  font-weight: bold;
+}
+
+.cost {
+  max-width: 30%;
+  border: 1px solid #345678;
+  padding: 20px 42px;
+  border-radius: 5px;
+  margin-left: 425px;
+  text-align: center;
+}
+
+
