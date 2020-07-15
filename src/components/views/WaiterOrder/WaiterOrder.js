@@ -3,8 +3,7 @@ import React from 'react';
 import styles from './WaiterOrder.module.scss';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
-// import MenuItem from '@material-ui/core/MenuItem';
-// import Select from '@material-ui/core/Select';
+
 
 const WaiterOrderNew = () => {
   return (

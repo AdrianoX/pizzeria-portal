@@ -33,8 +33,6 @@ class Waiter extends React.Component {
       case 'free':
         return (
           <>
-            {/* <Button>thinking</Button>
-            <Button>new order</Button> */}
             <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/new`}>new order</Button>
             <Button component={Link} to={`${process.env.PUBLIC_URL}/waiter/order/:id`}>show order</Button>
           </>

@@ -48,14 +48,12 @@ const Tables = () => {
           id="datetime-local"
           label="NewBooking date"
           type="datetime-local"
-          // defaultValue="2017-05-24T10:30"
           className={styles.textField}
           value={dateTest.date}
           InputLabelProps={{
             shrink: true,
           }}
         />
-        {/* <Button className={styles.button} component ={Link} to={process.env.PUBLIC_URL +'/tables/booking/new'}>New Booking</Button> */}
         <Button className={styles.button} component ={Link} to={process.env.PUBLIC_URL +'/tables/booking/new'}>New Booking</Button>
         <Button className={styles.button} component ={Link} to={process.env.PUBLIC_URL +'/tables/events/new'}>New Event</Button>
       </form>
@@ -98,7 +96,6 @@ const Tables = () => {
               </TableCell>
             </TableRow>
           ))}
-
         </TableBody>
       </Table>
 

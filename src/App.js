@@ -3,7 +3,6 @@ import MainLayout from './components/layout/MainLayout/MainLayout';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store';
-// import styles
 
 
 import Login from './components/views/Login/Login';
