@@ -17,8 +17,8 @@ class Waiter extends React.Component {
       active: PropTypes.bool,
       error: PropTypes.oneOfType(PropTypes.bool,PropTypes.string),
     }),
-    tables: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
-    // tables: PropTypes.array, //object
+    // tables: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
+    tables: PropTypes.array, //object
     updateTableStatus: PropTypes.func,
   }
 
@@ -108,7 +108,7 @@ class Waiter extends React.Component {
                     )}
                   </TableCell>
                   <TableCell>
-                    {this.renderActions(row.status)}
+                    {this.renderActions(row.status, row.id)}
                   </TableCell>
                 </TableRow>
               ))}

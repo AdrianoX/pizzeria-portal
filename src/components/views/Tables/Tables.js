@@ -13,9 +13,9 @@ import Button from '@material-ui/core/Button';
 
 const reservAndEvents = [
 
-  {mainTime: '19:00', column1: '', row1: '', column2: 'NewBooking', row2: '', column3: '', row3: '', column4: '', row4: '', column5: '', row5: '', column6: 'NewBooking', row6: ''},
-  {mainTime: '19:30', column1: '', row1: '', column2: '', row2: '', column3: '', row3: '', column4: '', row4: '', column5: '', row5: '', column6: '', row6: ''},
-  {mainTime: '20:00', column1: '', row1: '', column2: '', row2: '', column3: 'NewBooking', row3: '', column4: '', row4: '', column5: 'NewEvent', row5: '', column6: '', row6: ''},
+  {mainTime: '19:00', column1: '', row1: '123', column2: 'NewBooking', row2: '', column3: '', row3: '', column4: '', row4: '', column5: '', row5: '', column6: 'NewBooking', row6: ''},
+  {mainTime: '19:30', column1: '', row1: '323', column2: '', row2: '', column3: '', row3: '', column4: '', row4: '', column5: '', row5: '', column6: '', row6: ''},
+  {mainTime: '20:00', column1: '', row1: '456', column2: '', row2: '', column3: 'NewBooking', row3: '', column4: '', row4: '', column5: 'NewEvent', row5: '', column6: '', row6: ''},
   {mainTime: '20:30', column1: 'NewBooking', row1: '', column2: '', row2: '', column3: '', row3: '', column4: '', row4: '', column5: '', row5: '', column6: '', row6: ''},
   {mainTime: '21:00', column1: '', row1: '', column2: '', row2: '', column3: '', row3: '', column4: 'NewEvent', row4: '', column5: '', row5: '', column6: '', row6: ''},
 ];
@@ -24,11 +24,11 @@ const renderActions = (column, id) => {
   switch (column) {
     case 'NewBooking':
       return (
-        <Button component ={Link} to={process.env.PUBLIC_URL +'/tables/booking/:id' + id}>NewBooking</Button>
+        <Button component ={Link} to={process.env.PUBLIC_URL +'/tables/booking/' + id}>NewBooking</Button>
       );
     case 'NewEvent':
       return (
-        <Button component ={Link} to={process.env.PUBLIC_URL +'/tables/events/:id' + id}>NewEvent</Button>
+        <Button component ={Link} to={process.env.PUBLIC_URL +'/tables/events/' + id}>NewEvent</Button>
       );
     default:
       return null;
@@ -80,19 +80,19 @@ const Tables = () => {
                 {renderActions(row.column1, row.row1)}
               </TableCell>
               <TableCell>
-                {renderActions(row.column2, row.row2)}
+                {renderActions(row.column2, row.row1)}
               </TableCell>
               <TableCell>
-                {renderActions(row.column3, row.row3)}
+                {renderActions(row.column3, row.row1)}
               </TableCell>
               <TableCell>
-                {renderActions(row.column4, row.row4)}
+                {renderActions(row.column4, row.row1)}
               </TableCell>
               <TableCell>
-                {renderActions(row.column5, row.row5)}
+                {renderActions(row.column5, row.row1)}
               </TableCell>
               <TableCell>
-                {renderActions(row.column6, row.row6)}
+                {renderActions(row.column6, row.row1)}
               </TableCell>
             </TableRow>
           ))}
