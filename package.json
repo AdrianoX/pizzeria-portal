@@ -14,7 +14,9 @@
     "test": "react-scripts test --noStackTrace",
     "test-all": "react-scripts test --watchAll=false --noStackTrace",
     "test-related": "react-scripts test --watchAll=false --noStackTrace --findRelatedTests",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "husky": {
     "hooks": {
@@ -63,12 +65,14 @@
     "react-test-renderer": "^16.13.1",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.5",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "eslint-watch": "^7.0.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.9",
     "redux-devtools-extension": "^2.13.8"
-  }
+  },
+  "snyk": true
 }
